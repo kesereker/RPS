@@ -3,7 +3,6 @@ package com.tyntec;
 import com.tyntec.enums.Choice;
 import junit.framework.TestCase;
 import org.junit.Assert;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 

@@ -1,7 +1,6 @@
 package com.tyntec.main;
 
 import com.tyntec.enums.Choice;
-
 import java.util.Random;
 
 /**
