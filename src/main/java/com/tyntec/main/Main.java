@@ -1,6 +1,6 @@
 package com.tyntec.main;
 
-import com.tyntec.enums.Move;
+import com.tyntec.enums.Choice;
 
 import java.util.Random;
 
@@ -16,26 +16,24 @@ public class Main {
 
     /** This function starts the game, player 1 always chooses paper, player 2 is randomized */
     private static void startGame(int gameCount) {
-        int pA = 0, pB = 0, tie =0;
+        int playerA = 0, playerB = 0, tie =0;
 
-        Move[] moves = Move.values();
+        Choice[] choices = Choice.values();
         Random random = new Random();
 
-        for(int i=0;i<gameCount;i++){
-            int index = random.nextInt(moves.length);
+        for(int i=0; i<gameCount; i++) {
+            int index = random.nextInt(choices.length);
 
-            if (Move.PAPER.play(moves[index]) == 0) {
+            if(Choice.PAPER.play(choices[index]) == 0) {
                 tie++;
-            }
-            else if (Move.PAPER.play(moves[index]) == 1){
-                pA++;
-            }
-            else if (Move.PAPER.play(moves[index]) == 2) {
-                pB++;
+            } else if(Choice.PAPER.play(choices[index]) == 1) {
+                playerA++;
+            } else if(Choice.PAPER.play(choices[index]) == 2) {
+                playerB++;
             }
         }
-        System.out.println("Player A wins " + pA + " of " + gameCount + " games");
-        System.out.println("Player B wins " + pB + " of " + gameCount + " games");
+        System.out.println("Player A wins " + playerA + " of " + gameCount + " games");
+        System.out.println("Player B wins " + playerB + " of " + gameCount + " games");
         System.out.println("Tie " + tie + " of " + gameCount + " games");
     }
 
