@@ -14,8 +14,8 @@ public class Main {
         startGame(100);
     }
 
-    /** This function starts the game, player 1 always chooses paper, player 2 is randomized */
-    private static void startGame(int gameCount) {
+    /** Starts the game, Player A always chooses paper, Player B is randomized */
+    public static void startGame(int gameCount) {
         int playerA = 0, playerB = 0, tie =0;
 
         Choice[] choices = Choice.values();
