@@ -8,7 +8,7 @@ import org.junit.Assert;
  * Created by kemaleser on 11.08.2016.
  * This class is used for unit testing
  */
-public class TestSign extends TestCase {
+public class TestGame extends TestCase {
 
     /** Check if the move types are true*/
     public static void testMoveTypes() {
