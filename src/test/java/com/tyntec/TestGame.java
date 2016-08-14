@@ -48,13 +48,14 @@ public class TestGame extends TestCase {
         startGame(100);
         System.setOut(oldOutput);
         String output = new String(outputStream.toByteArray());
+        String[] outputParts = output.split(" ");
         Assert.assertNotNull(outputStream);
         Assert.assertTrue(output.contains("Player A"));
         Assert.assertTrue(output.contains("Player B"));
         Assert.assertTrue(output.contains("Tie"));
-        String playerA = output.substring(14,16);
-        String playerB = output.substring(44,46);
-        String tie = output.substring(64,66);
+        String playerA = outputParts[3];
+        String playerB = outputParts[9];
+        String tie = outputParts[13];
         Assert.assertTrue(100 == Integer.parseInt(playerA) + Integer.parseInt(playerB) + Integer.parseInt(tie));
     }
 }
